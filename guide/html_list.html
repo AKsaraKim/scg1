@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<title>SFESTA MOBILE WEB HTML LIST</title>
+	<script type="text/javascript" src="resources/js/lib/jquery.js"></script>
+	<script type="text/javascript" src="resources/js/lib/jsTree/jquery.jstree.js"></script>
+	<link rel="stylesheet" href="resources/css/reset.css">
+	<link rel="stylesheet" href="resources/css/html_list.css">
+<style> 
+
+</style>
+</head>
+
+<body class="kr ko-kr">
+
+
+<div id="treecontrol">
+	<h1>SCG1 html list</strong></h1>
+	<a href="#" id="c">Close All</a>
+	<a href="#" id="o">Open All</a>
+</div>
+
+<div class="history">
+	<div class="title_btn">
+		<span>History List</span>
+		<a href="#" class="history_toggle">Close / Open</a>		
+	</div>
+	<table class="history_table">
+		<tr>
+			<td>2023-11-14</td>
+			<td><strong>Document Realease</td>
+		</tr>				
+	</table>
+</div>
+
+
+<div id="navigation">
+	<ul>
+		<li><strong>1. 로그인</strong>
+			<ul>
+				<li class="cmp"><a href="../html/lg/sglg0001.html" target="ifrhowl">사원번호 로그인</a></li>			
+				<li class="cmp"><a href="../html/lg/sglg0002.html" target="ifrhowl">로그인 실패</a></li>
+				<li class="cmp"><a href="../html/lg/sglg0003.html" target="ifrhowl">로그인 인증</a></li>
+				<li class="cmp"><a href="../html/lg/sglg0004.html" target="ifrhowl">인증번호 입력실패</a></li>
+			</ul>
+		</li>
+		<li><strong>2. 메인대시보드</strong>
+			<ul>
+				<li class="cmp"><a href="../html/dh/sgdh0001.html" target="ifrhowl">대시보드</a></li>
+				<li class="cmp"><a href="../html/dh/sgdh0002.html" target="ifrhowl">EZ복지 길라잡이</a></li>
+			</ul>
+		</li>
+		<li><strong>3. 우편물 현황</strong>
+			<ul>
+				<li class="cmp"><a href="../html/ml/sgml0001.html" target="ifrhowl">우편물 현황</a></li>
+			</ul>
+		</li>
+		<li><strong>4. 결재 현황</strong>
+			<ul>
+				<li class="cmp"><a href="../html/ap/sgap0001.html" target="ifrhowl">결재 현황</a></li>	
+			</ul>
+		</li>
+		<li><strong>5. 위임관리</strong>
+			<ul>
+				<li class="cmp"><a href="../html/md/sgmd0001.html" target="ifrhowl">위임관리</a></li>	
+			</ul>
+		</li>
+		<li><strong>6. 금고출입관리</strong>
+			<ul>
+				<li class="cmp"><a href="../html/sf/sgsf0001.html" target="ifrhowl">금고출입관리</a></li>	
+			</ul>
+		</li>
+		<li><strong>7. 엔터테인먼트</strong>
+			<ul>
+				<li class="cmp"><a href="../html/et/sget0001.html" target="ifrhowl">엔터테인먼트 대시보드</a></li>	
+				<li class="cmp"><a href="../html/et/sget0002.html" target="ifrhowl">점심메뉴추천기</a></li>	
+				<li class="cmp"><a href="../html/et/sget0003.html" target="ifrhowl">사다리타기</a></li>	
+				<li class="cmp"><a href="../html/et/sget0004.html" target="ifrhowl">이벤트룰렛</a></li>	
+				<li class="cmp"><a href="../html/et/sget0005.html" target="ifrhowl">근처맛집탐색기</a></li>
+			</ul>
+		</li>
+		<li><strong>8. 게시판</strong>
+			<ul>
+				<li class="cmp"><a href="../html/bd/sgbd0001.html" target="ifrhowl">게시판 대시보드</a></li>
+				<li class="cmp"><a href="../html/bd/sgbd0002.html" target="ifrhowl">공지사항</a></li>
+				<li class="cmp"><a href="../html/bd/sgbd0003.html" target="ifrhowl">기능건의게시판</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript"> 
+$(document).ready(function(){
+	$("#navigation").jstree({	
+		"themes" : {"theme" : [ "apple" ]},
+		"plugins" : [ "themes", "html_data" ],
+	}).bind("loaded.jstree", function (event, data) {
+		$(this).jstree("open_all");
+		$('#navigation > ul > li > ul > li').each(function(){
+			var filename = $(this).find('a').attr("href");
+			$(this).append("<span>"+filename+"</span>");
+			$('a',this).attr('title',filename);
+		});
+	}) ;
+
+	var li_count = $('#navigation > ul > li > ul > li').size() - 3;
+	var cmpli_count = $('#navigation > ul > li > ul > li.cmp').size();
+
+	$("#o").click(function(){$('#navigation').jstree('open_all')});
+	$("#c").click(function(){$('#navigation').jstree('close_all')});
+
+	$(".history_toggle").click(function(){$('.history_table').slideToggle()});	
+});
+</script>
+</body>
+</html>
