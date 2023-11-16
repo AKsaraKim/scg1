@@ -36,7 +36,7 @@ input[type='password']{-webkit-appearance: none; display: inline-block; width: 1
 .mem_info .greet{margin-right: 4px;}
 
 
-/* footer */
+/* footer  */
 .footer_wrap{border-top: 1px solid #cbcbcb; height: 80px; display: flex; justify-content: center; align-items: center;}
 .ft_img{display: block; width: 101px; height: 20px; background-image: url(../../images/img_ft.png); opacity: 0.3; margin-top: 29px; margin-bottom: 30px;}
 
