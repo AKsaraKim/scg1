@@ -130,71 +130,296 @@
         <div class="post_wrap">
           <div class="header">
             <p>필터 : <span>total 100건</span></p>
-          </div>
-          <div class="content">
-            <div class="card_post">
-
-            </div>
-          </div>
-        </div>
-        <div class="noti_wrap" class="card_04">
-          <div class="header">
-            <h2>공지사항</h2>
-            <button>더보기</button>
-          </div>
-          <div class="content">
-            <ul>
+            <ul class="filter_list">
               <li>
-                <a href="#">
-                  <span class="tit">
-                    [ICT부] 지점 및 망분리 수위치 교체 작업으로 인한 일시 사용중단 안내(11/17)
-                  </span>
-                  <span class="date">
-                    2023-11-14
-                  </span>                  
-                </a>
+                <p>위치</p>
+                <ul>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="loc">
+                      <span>본사</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="loc">
+                      <span>지점</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="loc">
+                      <span>GIB</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="loc" checked="checked">
+                      <span>ALL</span>
+                    </label>
+                  </li>
+                </ul>
               </li>
               <li>
-                <a href="#">
-                  <span class="tit">
-                    [콘도] 2023 겨울성수기 콘도신청 및 일정 안내
-                  </span>
-                  <span class="date">
-                    2023-11-13
-                  </span>                  
-                </a>
+                <p>등기/공문번호</p>
+                <label>
+                  <input type="text">
+                </label>
               </li>
               <li>
-                <a href="#">
-                  <span class="tit">
-                    [규정개정] 사규관리규정 및 법률자문관리지침 개정 안내_법무지원부
-                  </span>
-                  <span class="date">
-                    2023-11-10
-                  </span>                  
-                </a>
+                <p>인수여부</p>
+                <ul>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="cdt">
+                      <span>인수</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="cdt">
+                      <span>미인수</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="cdt" checked="checked">
+                      <span>ALL</span>
+                    </label>
+                  </li>
+                </ul>
               </li>
               <li>
-                <a href="#">
-                  <span class="tit">
-                    [규정개정] 대체투자리스크 관리지침 개정 안내
-                  </span>
-                  <span class="date">
-                    2023-11-07
-                  </span>                  
-                </a>
+                <p>우편물구분</p>
+                <ul>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="pstp">
+                      <span>법원등기</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="pstp">
+                      <span>공문</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="pstp" checked="checked">
+                      <span>ALL</span>
+                    </label>
+                  </li>
+                </ul>
               </li>
               <li>
-                <a href="#">
-                  <span class="tit">
-                    [규정개정] 자산건전성분류 및 대손충당금적립 규칙 개정 안내
-                  </span>
-                  <span class="date">
-                    2023-11-07
-                  </span>                  
-                </a>
+                <p>기간</p>
+                <ul>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="prd" checked="checked">
+                      <span>1주일</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="prd">
+                      <span>1개월</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="prd">
+                      <span>3개월</span>
+                    </label>
+                  </li>
+                </ul>
               </li>
             </ul>
+          </div>
+          <div class="content">
+            <div class="card_wrap">
+              <div class="card_post">
+                <div class="status bfo">인수전</div>
+                <p>
+                  <span class="type">공문</span>
+                  <span class="num">785584087441</span>
+                </p>
+                <ul>
+                  <li>
+                    <span class="tit">접수일</span>
+                    <span class="sub">2023.11.10</span>
+                  </li>
+                  <li>
+                    <span class="tit">접수인</span>
+                    <span class="sub">김보관</span>
+                  </li>
+                  <li>
+                    <span class="tit">우편물 제목</span>
+                    <span class="sub">우편물제목우편물제목우편물제목</span>
+                  </li>
+                  <li>
+                    <span class="tit">발신처</span>
+                    <span class="sub">발신처</span>
+                  </li>
+                  <li>
+                    <span class="tit">사건번호</span>
+                    <span class="sub">000000000000</span>
+                  </li>
+                  <li>
+                    <span class="tit">인수정보</span>
+                    <span class="sub">인수정보인수정보인수정보</span>
+                  </li>
+                </ul>
+                <div class="btn_box full">
+                  <button>인수</button>
+                </div>
+              </div>
+              <div class="card_post">
+                <div class="status aft">인수완료</div>
+                <p>
+                  <span class="type">공문</span>
+                  <span class="num">785584087441</span>
+                </p>
+                <ul>
+                  <li>
+                    <span class="tit">접수일</span>
+                    <span class="sub">2023.11.10</span>
+                  </li>
+                  <li>
+                    <span class="tit">접수인</span>
+                    <span class="sub">김보관</span>
+                  </li>
+                  <li>
+                    <span class="tit">우편물 제목</span>
+                    <span class="sub">우편물제목우편물제목우편물제목</span>
+                  </li>
+                  <li>
+                    <span class="tit">발신처</span>
+                    <span class="sub">발신처</span>
+                  </li>
+                  <li>
+                    <span class="tit">사건번호</span>
+                    <span class="sub">000000000000</span>
+                  </li>
+                  <li>
+                    <span class="tit">인수정보</span>
+                    <span class="sub">인수정보인수정보인수정보</span>
+                  </li>
+                </ul>
+                <div class="btn_box full">
+                  <button disabled="disabled">인수</button>
+                </div>
+              </div>
+              <div class="card_post">
+                <div class="status bfo">인수전</div>
+                <p>
+                  <span class="type">공문</span>
+                  <span class="num">785584087441</span>
+                </p>
+                <ul>
+                  <li>
+                    <span class="tit">접수일</span>
+                    <span class="sub">2023.11.10</span>
+                  </li>
+                  <li>
+                    <span class="tit">접수인</span>
+                    <span class="sub">김보관</span>
+                  </li>
+                  <li>
+                    <span class="tit">우편물 제목</span>
+                    <span class="sub">우편물제목우편물제목우편물제목</span>
+                  </li>
+                  <li>
+                    <span class="tit">발신처</span>
+                    <span class="sub">발신처</span>
+                  </li>
+                  <li>
+                    <span class="tit">사건번호</span>
+                    <span class="sub">000000000000</span>
+                  </li>
+                  <li>
+                    <span class="tit">인수정보</span>
+                    <span class="sub">인수정보인수정보인수정보</span>
+                  </li>
+                </ul>
+                <div class="btn_box full">
+                  <button>인수</button>
+                </div>
+              </div>
+              <div class="card_post">
+                <div class="status bfo">인수전</div>
+                <p>
+                  <span class="type">공문</span>
+                  <span class="num">785584087441</span>
+                </p>
+                <ul>
+                  <li>
+                    <span class="tit">접수일</span>
+                    <span class="sub">2023.11.10</span>
+                  </li>
+                  <li>
+                    <span class="tit">접수인</span>
+                    <span class="sub">김보관</span>
+                  </li>
+                  <li>
+                    <span class="tit">우편물 제목</span>
+                    <span class="sub">우편물제목우편물제목우편물제목</span>
+                  </li>
+                  <li>
+                    <span class="tit">발신처</span>
+                    <span class="sub">발신처</span>
+                  </li>
+                  <li>
+                    <span class="tit">사건번호</span>
+                    <span class="sub">000000000000</span>
+                  </li>
+                  <li>
+                    <span class="tit">인수정보</span>
+                    <span class="sub">인수정보인수정보인수정보</span>
+                  </li>
+                </ul>
+                <div class="btn_box full">
+                  <button>인수</button>
+                </div>
+              </div>
+              <div class="card_post">
+                <div class="status bfo">인수전</div>
+                <p>
+                  <span class="type">공문</span>
+                  <span class="num">785584087441</span>
+                </p>
+                <ul>
+                  <li>
+                    <span class="tit">접수일</span>
+                    <span class="sub">2023.11.10</span>
+                  </li>
+                  <li>
+                    <span class="tit">접수인</span>
+                    <span class="sub">김보관</span>
+                  </li>
+                  <li>
+                    <span class="tit">우편물 제목</span>
+                    <span class="sub">우편물제목우편물제목우편물제목</span>
+                  </li>
+                  <li>
+                    <span class="tit">발신처</span>
+                    <span class="sub">발신처</span>
+                  </li>
+                  <li>
+                    <span class="tit">사건번호</span>
+                    <span class="sub">000000000000</span>
+                  </li>
+                  <li>
+                    <span class="tit">인수정보</span>
+                    <span class="sub">인수정보인수정보인수정보</span>
+                  </li>
+                </ul>
+                <div class="btn_box full">
+                  <button>인수</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -4,14 +4,23 @@ html, body{width: 100%; height: 100%; background: #f6f6f6}
 
 
 /* input form */
+.btn_box.full > button{width: 100%;}
+
 button{background-color: #fff; color:#000; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; line-height: 18px; display: inline-block; padding: 4px 8px; transition: 0.2s all;}
 button:hover{color:#fff; background-color: #3259c0; border: 1px solid #3259c0;}
+button[disabled]{background-color: #bbbbbb; color:#959595;}
 
 a{color: #000; transition: 0.2s all;}
 a:hover{color: #3259c0;}
 
-input[type='text']{-webkit-appearance: none; display: inline-block; width: 100%; border: 1px solid #cccccc; background-color: #fff; font-size: 14px; line-height: 20px; padding: 8px; border-radius: 2px;}
+input[type='text']{-webkit-appearance: none; display: inline-block; width: 100%; border: 1px solid #cccccc; background-color: #fff; font-size: 14px; line-height: 20px; padding: 4px 8px; border-radius: 2px;}
 input[type='password']{-webkit-appearance: none; display: inline-block; width: 100%; border: 1px solid #cccccc; background-color: #fff; font-size: 14px; line-height: 20px; padding: 8px; border-radius: 2px;}
+
+.btn_radio_sq{cursor: pointer;}
+.btn_radio_sq input{position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;}
+.btn_radio_sq input + span{background-color: #fff; color:#000; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; line-height: 18px; display: inline-block; padding: 4px 8px; transition: 0.2s all;}
+.btn_radio_sq input:checked + span{color:#fff; background-color: #3259c0; border: 1px solid #3259c0;}
+.btn_radio_sq:hover span{color: #3259c0; border: 1px solid #3259c0;}
 
 
 /* layout */
@@ -55,7 +64,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .ezbokji > a:hover{color:#fff; background-color: #3259c0; border: 1px solid #3259c0;}
 
 
-.cont{flex:1; display: flex; flex-direction: column; overflow-y: auto;}
+.cont{flex:1; display: flex; flex-direction: column; overflow-x: auto;  overflow-y: auto;}
 
 
 
@@ -91,14 +100,33 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 
 /* post */
 .ml_wrap{padding:8px; flex:1}
-.post_wrap{display: block; background-color: #fff; border: 1px solid #cbcbcb; box-shadow: 0 3px 6px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.11); padding:12px; border-radius: 8px; margin: 8px;}
-.post_wrap > .header{display: flex; justify-content: space-between; margin-bottom: 8px;}
-.post_wrap > .header > h2{ font-size: 18px; margin:0; line-height: 28px;}
-.post_wrap .content > ul > li{border-bottom: 1px solid #e9e9e9;}
-.post_wrap .content > ul > li:last-child{border-bottom: 0;}
-.post_wrap .content > ul > li > a{display: flex; padding: 4px;}
-.post_wrap .content > ul > li > a > .tit{flex:1}
-.post_wrap .content > ul > li > a > .date{margin-left: 8px;}
+.post_wrap{display: block; background-color: #fff; border: 1px solid #cbcbcb; box-shadow: 0 3px 6px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.11); padding:12px; border-radius: 8px; margin: 8px; min-width: 924px;}
+.post_wrap > .header{margin: -12px; padding:12px 12px 8px 12px; border-bottom: 1px solid #e9e9e9;}
+.post_wrap > .header > p{ font-size: 16px; margin:0; line-height: 24px; margin-bottom: 8px;}
+.post_wrap > .content{margin: -12px; padding:20px 8px 12px 8px;}
 
+.filter_list{display: flex;}
+.filter_list > li{padding:0 8px; border-left: 1px solid #cbcbcb;}
+.filter_list > li:first-child{border-left: 0; padding-left: 0px;}
+.filter_list > li > ul{display: flex;}
+.filter_list > li > ul > li{margin-left: 4px;}
+.filter_list > li > ul > li:first-child{margin-left: 0px;}
+.filter_list > li > p{margin-bottom: 4px; font-size: 12px;}
+
+.card_wrap{display: flex; flex-wrap: wrap;}
+.card_post{display: block; position: relative; background-color: #fff; border: 1px solid #cbcbcb; box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 1px 1px rgba(0,0,0,.11); padding:8px; border-radius: 8px; margin: 4px; width: 218px;}
+.card_post .status{position: absolute; top:8px; right:8px; background-color: #fff; color:#000; border-radius: 8px; font-size: 12px; line-height: 16px; padding: 3px 4px; transition: 0.2s all; }
+.card_post > p{background-color: #3259c0; margin:-8px; padding: 8px; border-radius: 7px 7px 0 0;}
+.card_post .status.aft + p{background-color: #bbbbbb;}
+.card_post .status.aft + p + ul > li > span{color: #959595;}
+.card_post > p > .type{background-color: #fff; color:#000; border-radius: 8px; font-size: 12px; line-height: 16px; padding: 3px 4px; transition: 0.2s all; }
+.card_post > p > .num{color: #fff;}
+.card_post > ul{margin-top:12px;}
+.card_post > ul > li{display: flex; justify-content: space-between; padding: 4px 0;}
+.card_post > ul > li > span{line-height: 16px;}
+.card_post > ul > li > .tit{font-size: 12px;  margin-right: 4px;}
+.card_post > ul > li > .sub{font-size: 14px; flex:1; text-align: right;}
+.card_post .btn_box{margin-top:4px;}
+.card_post .btn_box button{font-size: 16px; line-height: 22px;}
 
 
