@@ -77,9 +77,11 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .wrapper.login{width: 100%; height: 100%; display: flex; justify-content: center; background-color: #0c193a;}
 .login_wrap{width: 360px; background-color: #f6f6f6; padding:12px; display: flex; flex-direction: column; justify-content: center; z-index: 10;}
 .login_wrap .login_cont{flex:1; display: flex; flex-direction: column; justify-content: center}
-.login_wrap .login_cont h2{text-align: center;}
-.login_wrap .login_cont h2 img{width: 80%;}
-.login_wrap .login_cont h2 span{font-size: 16px; display: block; margin-top: 8px;}
+.login_wrap .login_cont h2{text-align: center; z-index: 10; }
+.login_wrap .login_cont h2 img{width: 60%; z-index: 10; position: relative;}
+.login_wrap .login_cont h2.apr_act img{animation: logo_ani 0.4s ease-in; }
+.login_wrap .login_cont h2 > span{font-size: 16px; display: block; margin-top: 8px;}
+.login_wrap .login_cont h2 > span .imp{font-family: OneShinhanB;}
 .login_box{margin-top: 32px;}
 .login_box > ul > li{ margin-top: 4px; position: relative;} 
 .login_box > ul > li:first-child{margin-top:0;}
@@ -88,8 +90,15 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .login_box > ul input.certi_num{padding-right: 60px;}
 .login_box > ul .remain_time{position: absolute; right: 16px; top:calc(50% - 9px); line-height: 18px; color: #ff0000;}
 .login_box .btn_box.full{margin-top:16px;}
-.login_box .btn_box.full button{font-size: 16px; line-height: 24px; padding: 8px 8px;}
-.login_wrap .footer_wrap{margin:0 -12px -12px -12px;}
+.login_box .btn_box.full button.bsc_gld{font-size: 16px; line-height: 24px; padding: 8px 8px; background-color: #0031b4; color: #fff; border:1px solid #0031b4}
+.login_box .btn_box.full button.bsc_gld:hover{font-size: 16px; line-height: 24px; padding: 8px 8px; background-color: #0046ff; color: #fff; border:1px solid #0046ff}
+.login_box .btn_box.tws{margin-top:16px; display: flex;}
+.login_box .btn_box.tws button{flex:1; margin-left: 8px; font-size: 16px; line-height: 24px; padding: 8px 8px;}
+.login_box .btn_box.tws button:first-child{margin-left: 0;}
+.login_box .btn_box.tws button.bsc_gld{font-size: 16px; line-height: 24px; padding: 8px 8px; background-color: #0031b4; color: #fff; border:1px solid #0031b4}
+.login_box .btn_box.tws button.bsc_gld:hover{font-size: 16px; line-height: 24px; padding: 8px 8px; background-color: #0046ff; color: #fff; border:1px solid #0046ff}
+
+.login_wrap .footer_wrap{margin:12px -12px -12px -12px;}
 .check_line{display: flex; justify-content: space-between;}
 
 .marquee_bg{position: absolute; width: 100vw; max-width: 100%; height: 150px; overflow-x: hidden; bottom:0; left: 0;}
@@ -168,3 +177,51 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .content .noti_box > span{display: block; text-align: center;}
 
 
+
+
+/* mobile size */
+
+@media (max-width: 480px) {
+  .login_wrap{width: 100%;}
+  .login_wrap .footer_wrap{margin:32px -12px -12px -12px; height: 40px;}
+  .marquee_bg{z-index: 10; height: 60px; bottom:50px;}
+  .marquee_bg .mq_cont{color:#000; font-size: 40px;}
+
+  nav{position: absolute;}
+}
+
+
+/* appear animation */
+:is(.ani01, .ani02, .ani03, .ani04 ,.ani05){
+  animation: app_ani 0.4s ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.ani01{animation-delay: 0s;}
+.ani02{animation-delay: 0.2s;}
+.ani03{animation-delay: 0.4s;}
+.ani04{animation-delay: 0.6s;}
+.ani05{animation-delay: 0.8s;}
+
+@keyframes app_ani {
+  from {
+    transform: translateY(100px);
+    opacity: 0;    
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;    
+  }
+}
+
+@keyframes logo_ani {
+  from {
+    opacity: 0;
+    transform: scale(400%) rotate(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
