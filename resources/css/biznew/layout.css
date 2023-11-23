@@ -185,12 +185,16 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 /* mobile size */
 
 @media (max-width: 480px) {
-  .login_wrap{width: 100%;}
+  .wrapper.login{background-color: #f6f6f6;}
+
+  .login_wrap{width: 100%; background-color: transparent; z-index: 11;}
   .login_wrap .footer_wrap{margin:32px -12px -12px -12px; height: 40px;}
   .marquee_bg{z-index: 10; height: 60px; bottom:50px;}
   .marquee_bg .mq_cont{color:#000; font-size: 40px;}
 
-  .header_bar{justify-content: center; background-color: transparent; border-bottom: 0; z-index: 10;}
+  .btn_radio_sq input + span{padding: 4px 6px;}
+
+  .header_bar{justify-content: center; background-color: transparent; z-index: 10;}
   .logo{padding:4px;}
   .logo > button{width: 40px; height: 40px; background-color: transparent;}
   .menu_icon{display: block; position: absolute; width: 54px; height: 54px; top: 0px; left: 0px;}
@@ -220,16 +224,20 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
   .sum_line > ul > li{padding:4px;}
   .sum_line > ul > li > a > .tit > .main{display: block;}
   .noti_wrap{margin:8px 4px;}
-  .cont_wrap.ebokji{margin:8px 4px;}
+  .cont_wrap{margin:0px; border-radius: 0; border: 0; box-shadow: none;}
+  .cont_wrap.ebokji{margin:0px;}
 
-  .ml_wrap{padding: 4px;}
-  .post_wrap{margin:8px 4px; min-width: auto;}
+  .tit_line {margin: 12px 12px 0 12px;}
+
+  .ml_wrap{padding: 0px; background-color: #fff;}
+
+  .post_wrap{margin:4px 0px; min-width: auto; border-radius: 0; border: 0; box-shadow: none;}
 
   .card_post{width: 100%;}
 
   .filter_list{flex-wrap: wrap;}
 
-  .filter_list > li{padding: 0; border-left: 0;}
+  .filter_list > li{padding: 0; border-left: 0; width: calc(50% - 4px); margin: 2px; }
   .filter_list > li > ul > li{margin-left:2px;}
 
   .footer_wrap{height: 40px;}
