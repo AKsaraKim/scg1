@@ -5,16 +5,35 @@ html, body{width: 100%; height: 100%; background: #f6f6f6}
 
 /* input form */
 .btn_box.full > button{width: 100%;}
+.btn_box.mlt{display: flex; margin:0 -2px;}
+.btn_box.mlt > button{flex:1;margin:0 2px;}
+
+.btn_flt_box > button{width: 86px;}
+.btn_flt_box > button > i{font-size: 24px;}
+.btn_flt_box > button > span{display: block; font-size: 14px; margin-top: 4px;}
 
 button{background-color: #fff; color:#000; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; line-height: 18px; display: inline-block; padding: 4px 8px; transition: 0.2s all;}
 button:hover{color:#fff; background-color: #3259c0; border: 1px solid #3259c0;}
 button[disabled]{background-color: #bbbbbb; color:#959595;}
+
+button.maj{background-color: #3259c0; color:#fff; border: 1px solid #3259c0; border-radius: 8px; font-size: 12px; line-height: 18px; display: inline-block; padding: 4px 8px; transition: 0.2s all;}
+button.maj:hover{color:#fff; background-color: #0e3293; border: 1px solid #0e3293;}
+
+button.impt{background-color: #ffbf00; color:#fff; border: 1px solid #ffbf00; border-radius: 8px; font-size: 12px; line-height: 18px; display: inline-block; padding: 4px 8px; transition: 0.2s all;}
+button.impt:hover{color:#fff; background-color: #bf9b30; border: 1px solid #bf9b30;}
+
+button.ibt_cls{background-color: transparent; border: none; border-radius: 0; font-size: 24px; width: 30px; height: 30px; padding: 0; line-height: 30px;}
+button.ibt_cls .txt{display: none;}
+button.ibt_cls:hover{color: #3259c0;}
 
 a{color: #000; transition: 0.2s all;}
 a:hover{color: #3259c0;}
 
 input[type='text']{-webkit-appearance: none; display: inline-block; width: 100%; border: 1px solid #cccccc; background-color: #fff; font-size: 14px; line-height: 20px; padding: 4px 8px; border-radius: 2px;}
 input[type='password']{-webkit-appearance: none; display: inline-block; width: 100%; border: 1px solid #cccccc; background-color: #fff; font-size: 14px; line-height: 20px; padding: 4px 8px; border-radius: 2px;}
+input[type='date']{display: inline-block; width: 100%; border: 1px solid #cccccc; background-color: #fff; font-size: 14px; line-height: 20px; padding: 4px 8px; border-radius: 2px;}
+
+select{display: inline-block; width: 100%; border: 1px solid #cccccc; background-color: #fff; font-size: 14px; line-height: 20px; padding: 4px 8px; border-radius: 2px;}
 
 .btn_radio_sq{cursor: pointer;}
 .btn_radio_sq input{position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;}
@@ -29,6 +48,12 @@ input[type='password']{-webkit-appearance: none; display: inline-block; width: 1
 .ipt_chk > input:checked + i{display: block; left: 3px; top:4px; opacity: 1; font-size: 14px;}
 .ipt_chk > input:checked + i + span::before{border: 1px solid #3259c0;}
 
+.ipt_frm > ul > li{display: flex; padding:4px 0}
+.ipt_frm > ul > li > .tit{width: 80px; text-align: left; padding: 4px 8px 4px 0px; font-size: 14px; line-height: 25px;}
+.ipt_frm > ul > li > ul{display: flex; margin: 0 -2px; flex: 1}
+.ipt_frm > ul > li > ul > li{margin: 0 2px; flex: 1;}
+.ipt_frm input[type='date']{height: 33px;}
+.ipt_frm select{height: 33px;}
 
 /* layout */
 .wrap{position: relative; height: inherit; display: flex; flex-direction: column;}
@@ -145,8 +170,10 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 /* post */
 .ml_wrap{padding:8px; flex:1}
 .post_wrap{display: block; background-color: #fff; border: 1px solid #cbcbcb; box-shadow: 0 3px 6px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.11); padding:12px; border-radius: 8px; margin: 8px; min-width: 924px;}
-.post_wrap > .header{margin: -12px; padding:12px 12px 8px 12px; border-bottom: 1px solid #e9e9e9;}
+.post_wrap > .header{position: relative; margin: -12px; padding:12px 12px 8px 12px; border-bottom: 1px solid #e9e9e9;}
 .post_wrap > .header > p{ font-size: 16px; margin:0; line-height: 24px; margin-bottom: 8px;}
+.post_wrap > .header > .btn_flt_box{position: absolute; right: 0; top:0; height: 100%; padding: 12px 12px 8px 12px;}
+.post_wrap > .header > .btn_flt_box > button{height: 100%;}
 .post_wrap > .content{margin: -12px; padding:20px 8px 12px 8px;}
 
 .filter_list{display: flex;}
@@ -178,6 +205,24 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .content .noti_box{text-align: center; font-size: 16px; padding:12px;}
 .content .noti_box > i{opacity: 0.4; font-size: 22px;}
 .content .noti_box > span{display: block; text-align: center;}
+
+.ctg_md .card_post > p{background-color: #bad772;}
+
+
+/* layer popup */
+.laypop{z-index: 100; position: fixed; display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%; top:0; right: 0; left: 0; bottom: 0; background-color: rgba(0,0,0,.4); backdrop-filter: blur(2px); }
+.laypop::before{content: ''; display: block; flex: 1;}
+.laypop::after{content: ''; display: block; flex: 1;}
+
+.laypop_box{background: rgb(255,255,255); background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(232,232,232,1) 100%); box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22); border-radius: 8px; min-width: 240px; text-align: center;}
+.laypop_box > .header{padding: 20px 8px 8px 8px; position: relative;}
+.laypop_box > .header > span{font-size: 16px;}
+.laypop_box > .header > .ibt_cls{position: absolute; right: 0; top: 0;}
+.laypop_box > .cont{padding: 8px;}
+.laypop_box > .footer{padding: 8px;}
+.laypop_box .ipt_frm{padding: 4px;}
+
+.laypop .btn_box button{font-size: 14px; padding:8px;}
 
 
 
