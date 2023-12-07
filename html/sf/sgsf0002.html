@@ -59,14 +59,14 @@
           </a>
         </li>
         <li>
-          <a href="#" class="on">
+          <a href="#">
             <i class="fa-solid fa-hand-holding-hand"></i>
             <span>위임관리</span>
             <i class="ico_new">새로운 사항</i>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="on">
             <i class="fa-solid fa-vault"></i>
             <span>금고출입관리</span>
             <i class="ico_new">새로운 사항</i>
@@ -136,91 +136,108 @@
     <div class="cont">
       <div class="ml_wrap">
         <div class="tit_line">
-          <h3>위임관리</h3>
+          <h3>금고출입관리</h3>
         </div>
         <div class="post_wrap">
           <div class="header">
-            <p>현재위임 : <span>3건</span></p>
+            <p>출입건수 : <span>3건</span></p>
             <ul class="filter_list">
               <li>
-                <p>검색기간</p>
+                <p>금고위치</p>
                 <ul>
                   <li>
                     <label class="btn_radio_sq">
-                      <input type="radio" name="per">
-                      <span>1주일</span>
+                      <input type="radio" name="loc">
+                      <span>10층</span>
                     </label>
                   </li>
                   <li>
                     <label class="btn_radio_sq">
-                      <input type="radio" name="per">
-                      <span>1개월</span>
+                      <input type="radio" name="loc">
+                      <span>11층</span>
                     </label>
                   </li>
                   <li>
                     <label class="btn_radio_sq">
-                      <input type="radio" name="per" checked="checked">
-                      <span>3개월</span>
+                      <input type="radio" name="loc" checked="checked">
+                      <span>ALL</span>
                     </label>
                   </li>
                 </ul>
               </li>
               <li>
-                <p>검색기간</p>
+                <p>출입일자 검색</p>
                 <ul>
                   <li>
-                    <label class="btn_radio_sq">
-                      <input type="radio" name="mdt">
-                      <span>위임중</span>
-                    </label>
+                    <input type="date">
                   </li>
                   <li>
-                    <label class="btn_radio_sq">
-                      <input type="radio" name="mdt" checked="checked">
-                      <span>위임종결</span>
-                    </label>
+                    ~
+                  </li>
+                  <li>
+                    <input type="date">
                   </li>
                 </ul>
               </li>
             </ul>
-            <div class="btn_flt_box">
+            <div class="btn_flt_box">              
               <button class="maj">
                 <i class="fa-solid fa-plus"></i>
-                <span>위임등록</span>
+                <span>출입신청</span>
               </button>
             </div>
           </div>
           <div class="content">
-            <div class="card_wrap ctg_md">
+            <div class="card_wrap ctg_sf">
               <div class="card_post">
                 <p>
-                  <span class="type">휴가</span>
+                  <span class="type">출입완료</span>
+                  <span class="date">2023-12-01</span>
                 </p>
+                <div class="time_stt">
+                  <ul>
+                    <li>
+                      <label>입장시간</label>
+                      <span class="time">12:59:59</span>
+                    </li>
+                    <li>
+                      <label>퇴장시간</label>
+                      <span class="time">12:59:59</span>
+                    </li>
+                  </ul>
+                </div>
                 <ul>
                   <li>
-                    <span class="tit">시작일</span>
+                    <span class="tit">신청인</span>
                     <span class="sub">
-                        <span class="date">2023.11.10</span>
-                        <span class="time">09:19:33</span>
+                        김성은(217917)
                     </span>
                   </li>
                   <li>
-                    <span class="tit">종료일</span>
+                    <span class="tit">용무</span>
                     <span class="sub">
-                      <span class="date">2023.11.10</span>
-                      <span class="time">09:19:33</span>
+                        <span class="sf_stt in">담보입고</span>
+                        <span class="sf_stt out">담보출고</span>
+                        <span class="sf_stt etc">기타</span>
                     </span>
                   </li>
                   <li>
-                    <span class="tit">사유</span>
-                    <span class="sub">휴가</span>
+                    <span class="tit">반입자산</span>
+                    <span class="sub">반입자산_반입자산</span>
+                  </li>
+                  <li>
+                    <span class="tit">반출자산</span>
+                    <span class="sub">
+                      반출자산 반출자산
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tit">비고</span>
+                    <span class="sub">테스트CC</span>
                   </li>
                 </ul>
-                <div class="btn_box mlt">
-                  <button>위임취소</button>
-                  <button class="maj">위임종결</button>
-                </div>
               </div>
+              
             </div>
             <div class="btn_box full">
               <button>더보기<i class="fa-solid fa-caret-down"></i></button>
@@ -239,6 +256,90 @@
 
   </div> 
 
+</div>
+
+<div class="laypop">
+  <div class="laypop_box">
+    <div class="header">
+      <span>금고출입신청</span>
+      <button class="ibt_cls">
+        <i class="fa-solid fa-xmark"></i>
+        <span class="txt">닫기</span>
+      </button>
+    </div>
+    <div class="cont">
+      <div class="ipt_frm">
+        <ul>
+          <li>
+            <span class="tit">출입자</span>
+            <span class="sub">김성은<span class="num">(217917)</span></span>
+          </li>
+          <li>
+            <span class="tit">금고위치</span>
+            <ul>
+              <li>
+                <select>
+                  <option>11층 금고</option>
+                </select>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="tit">출입일자</span>
+            <ul>
+              <li>
+                <input type="date" />
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="tit">용무</span>
+            <ul>
+              <li>
+                <label class="ipt_chk">
+                  <input type="checkbox">
+                  <i class="fa-solid fa-check"></i>
+                  <span>담보입고</span>
+                </label>
+              </li>
+              <li>
+                <label class="ipt_chk">
+                  <input type="checkbox">
+                  <i class="fa-solid fa-check"></i>
+                  <span>담보출고</span>
+                </label>
+              </li>
+              <li>
+                <label class="ipt_chk">
+                  <input type="checkbox">
+                  <i class="fa-solid fa-check"></i>
+                  <span>기타</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="tit">반입자산</span>
+            <input type="text" placeholder="거래처명과 내용을 입력해 주세요." />
+          </li>
+          <li>
+            <span class="tit">반출자산</span>
+            <input type="text" placeholder="거래처명과 내용을 입력해 주세요." />
+          </li>
+          <li>
+            <span class="tit">비고</span>
+            <textarea placeholder="내용을 입력해 주세요."></textarea>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="btn_box mlt">
+        <button>취소</button>
+        <button class="maj">신청</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 

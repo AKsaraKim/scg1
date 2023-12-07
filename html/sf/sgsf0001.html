@@ -21,7 +21,10 @@
 <div class="wrap">
   <div class="header_bar">
     <h1 class="logo"><button>SHCAP G1</button></h1>
-    <div class="mem_info">
+    <div class="menu_icon">
+      <button>전체메뉴보기</button>
+    </div>
+    <div class="mem_info pc">
       <span class="greet">
         <span class="name">김성은</span>
         <span class="num">(217917)</span>
@@ -32,6 +35,14 @@
   </div>
   <div class="body_cont">
     <nav>
+      <div class="mem_info mb">
+        <span class="greet">
+          <span class="name">김성은</span>
+          <span class="num">(217917)</span>
+          님 환영합니다.
+        </span>
+        <button>로그아웃</button>
+      </div>
       <ul>
         <li>          
           <a href="#">
@@ -129,72 +140,112 @@
         </div>
         <div class="post_wrap">
           <div class="header">
-            <p>필터 : <span>total 100건</span></p>
-          </div>
-          <div class="content">
-            <div class="card_post">
-
-            </div>
-          </div>
-        </div>
-        <div class="noti_wrap" class="card_04">
-          <div class="header">
-            <h2>공지사항</h2>
-            <button>더보기</button>
-          </div>
-          <div class="content">
-            <ul>
+            <p>출입건수 : <span>3건</span></p>
+            <ul class="filter_list">
               <li>
-                <a href="#">
-                  <span class="tit">
-                    [ICT부] 지점 및 망분리 수위치 교체 작업으로 인한 일시 사용중단 안내(11/17)
-                  </span>
-                  <span class="date">
-                    2023-11-14
-                  </span>                  
-                </a>
+                <p>금고위치</p>
+                <ul>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="loc">
+                      <span>10층</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="loc">
+                      <span>11층</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="loc" checked="checked">
+                      <span>ALL</span>
+                    </label>
+                  </li>
+                </ul>
               </li>
               <li>
-                <a href="#">
-                  <span class="tit">
-                    [콘도] 2023 겨울성수기 콘도신청 및 일정 안내
-                  </span>
-                  <span class="date">
-                    2023-11-13
-                  </span>                  
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="tit">
-                    [규정개정] 사규관리규정 및 법률자문관리지침 개정 안내_법무지원부
-                  </span>
-                  <span class="date">
-                    2023-11-10
-                  </span>                  
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="tit">
-                    [규정개정] 대체투자리스크 관리지침 개정 안내
-                  </span>
-                  <span class="date">
-                    2023-11-07
-                  </span>                  
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="tit">
-                    [규정개정] 자산건전성분류 및 대손충당금적립 규칙 개정 안내
-                  </span>
-                  <span class="date">
-                    2023-11-07
-                  </span>                  
-                </a>
+                <p>출입일자 검색</p>
+                <ul>
+                  <li>
+                    <input type="date">
+                  </li>
+                  <li>
+                    ~
+                  </li>
+                  <li>
+                    <input type="date">
+                  </li>
+                </ul>
               </li>
             </ul>
+            <div class="btn_flt_box">              
+              <button class="maj">
+                <i class="fa-solid fa-plus"></i>
+                <span>출입신청</span>
+              </button>
+            </div>
+          </div>
+          <div class="content">
+            <div class="card_wrap ctg_sf">
+              <div class="card_post">
+                <p>
+                  <span class="type">출입완료</span>
+                  <span class="date">2023-12-01</span>
+                </p>
+                <div class="time_stt">
+                  <ul>
+                    <li>
+                      <label>입장시간</label>
+                      <span class="time">12:59:59</span>
+                    </li>
+                    <li>
+                      <label>퇴장시간</label>
+                      <span class="time">12:59:59</span>
+                    </li>
+                  </ul>
+                </div>
+                <ul>
+                  <li>
+                    <span class="tit">신청인</span>
+                    <span class="sub">
+                        김성은(217917)
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tit">용무</span>
+                    <span class="sub">
+                        <span class="sf_stt in">담보입고</span>
+                        <span class="sf_stt out">담보출고</span>
+                        <span class="sf_stt etc">기타</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tit">반입자산</span>
+                    <span class="sub">반입자산_반입자산</span>
+                  </li>
+                  <li>
+                    <span class="tit">반출자산</span>
+                    <span class="sub">
+                      반출자산 반출자산
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tit">비고</span>
+                    <span class="sub">테스트CC</span>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+            <div class="btn_box full">
+              <button>더보기<i class="fa-solid fa-caret-down"></i></button>
+            </div>
+            <div class="noti_box">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <span>검색결과가 없습니다.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -206,6 +257,7 @@
   </div> 
 
 </div>
+
 
 </body>
 </html>

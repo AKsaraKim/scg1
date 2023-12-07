@@ -21,7 +21,10 @@
 <div class="wrap">
   <div class="header_bar">
     <h1 class="logo"><button>SHCAP G1</button></h1>
-    <div class="mem_info">
+    <div class="menu_icon">
+      <button>전체메뉴보기</button>
+    </div>
+    <div class="mem_info pc">
       <span class="greet">
         <span class="name">김성은</span>
         <span class="num">(217917)</span>
@@ -32,6 +35,14 @@
   </div>
   <div class="body_cont">
     <nav>
+      <div class="mem_info mb">
+        <span class="greet">
+          <span class="name">김성은</span>
+          <span class="num">(217917)</span>
+          님 환영합니다.
+        </span>
+        <button>로그아웃</button>
+      </div>
       <ul>
         <li>          
           <a href="#">
@@ -129,72 +140,178 @@
         </div>
         <div class="post_wrap">
           <div class="header">
-            <p>필터 : <span>total 100건</span></p>
-          </div>
-          <div class="content">
-            <div class="card_post">
-
-            </div>
-          </div>
-        </div>
-        <div class="noti_wrap" class="card_04">
-          <div class="header">
-            <h2>공지사항</h2>
-            <button>더보기</button>
-          </div>
-          <div class="content">
-            <ul>
+            <p>미결재 : <span>3건</span></p>
+            <ul class="filter_list">
               <li>
-                <a href="#">
-                  <span class="tit">
-                    [ICT부] 지점 및 망분리 수위치 교체 작업으로 인한 일시 사용중단 안내(11/17)
-                  </span>
-                  <span class="date">
-                    2023-11-14
-                  </span>                  
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="tit">
-                    [콘도] 2023 겨울성수기 콘도신청 및 일정 안내
-                  </span>
-                  <span class="date">
-                    2023-11-13
-                  </span>                  
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="tit">
-                    [규정개정] 사규관리규정 및 법률자문관리지침 개정 안내_법무지원부
-                  </span>
-                  <span class="date">
-                    2023-11-10
-                  </span>                  
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="tit">
-                    [규정개정] 대체투자리스크 관리지침 개정 안내
-                  </span>
-                  <span class="date">
-                    2023-11-07
-                  </span>                  
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="tit">
-                    [규정개정] 자산건전성분류 및 대손충당금적립 규칙 개정 안내
-                  </span>
-                  <span class="date">
-                    2023-11-07
-                  </span>                  
-                </a>
+                <p>결재상태</p>
+                <ul>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="per">
+                      <span>미결재</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="per">
+                      <span>결재완료</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn_radio_sq">
+                      <input type="radio" name="per" checked="checked">
+                      <span>ALL</span>
+                    </label>
+                  </li>
+                </ul>
               </li>
             </ul>
+            <div class="btn_flt_box">              
+              <button class="impt">
+                <i class="fa-solid fa-check"></i>
+                <span>일괄승인</span>
+              </button>
+            </div>
+          </div>
+          <div class="content">
+            <div class="card_wrap ctg_ap">
+              <div class="card_post">
+                <p>
+                  <span class="type">시간 외 근무</span>
+                  <span class="num">공가(전일)</span>
+                </p>
+                <ul>
+                  <li>
+                    <span class="tit">기안일</span>
+                    <span class="sub">
+                        2023.11.10
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tit">부서</span>
+                    <span class="sub">
+                        ICT개발부
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tit">성명</span>
+                    <span class="sub">김성은</span>
+                  </li>
+                  <li>
+                    <span class="tit">기간</span>
+                    <span class="sub">
+                      <span class="date_stt">2023-11-14 ~</span>
+                      <span class="date_end">2023-11-15(1일)</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tit">대직자</span>
+                    <span class="sub">황태준</span>
+                  </li>
+                  <li>
+                    <span class="tit">사유</span>
+                    <span class="sub">테스트테스트</span>
+                  </li>
+                </ul>
+                <div class="aprv">
+                  <span class="tit">
+                    결재선 정보
+                  </span>
+                  <div class="line_box">
+                    <span class="tit">기안부서</span>
+                    <ul>
+                      <li>조경진</li>
+                      <li class="on">박정범호</li>
+                      <li>황태준</li>
+                    </ul>
+                  </div>
+                  <div class="line_box">
+                    <span class="tit">HR부서</span>
+                    <ul>
+                      <li>조경진</li>
+                      <li class="on">박정범호</li>
+                      <li>황태준</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="btn_box mlt">
+                  <button class="agt">반려</button>
+                  <button class="maj">승인</button>
+                </div>
+              </div>
+              
+              <div class="card_post">
+                <p>
+                  <span class="type">시간 외 근무</span>
+                  <span class="num">공가(전일)</span>
+                </p>
+                <ul>
+                  <li>
+                    <span class="tit">기안일</span>
+                    <span class="sub">
+                        2023.11.10
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tit">부서</span>
+                    <span class="sub">
+                        ICT개발부
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tit">성명</span>
+                    <span class="sub">김성은</span>
+                  </li>
+                  <li>
+                    <span class="tit">기간</span>
+                    <span class="sub">
+                      <span class="date_stt">2023-11-14 ~</span>
+                      <span class="date_end">2023-11-15(1일)</span>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="tit">대직자</span>
+                    <span class="sub">황태준</span>
+                  </li>
+                  <li>
+                    <span class="tit">사유</span>
+                    <span class="sub">테스트테스트</span>
+                  </li>
+                </ul>
+                <div class="aprv">
+                  <span class="tit">
+                    결재선 정보
+                  </span>
+                  <div class="line_box">
+                    <span class="tit">기안부서</span>
+                    <ul>
+                      <li>조경진</li>
+                      <li>박정범호</li>
+                      <li>황태준</li>
+                    </ul>
+                  </div>
+                  <div class="line_box">
+                    <span class="tit">HR부서</span>
+                    <ul>
+                      <li>조경진</li>
+                      <li>박정범호</li>
+                      <li>황태준</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="btn_box mlt">
+                  <button class="agt">반려</button>
+                  <button class="maj">승인</button>
+                </div>
+              </div>
+            </div>
+            <div class="btn_box full">
+              <button>더보기<i class="fa-solid fa-caret-down"></i></button>
+            </div>
+            <div class="noti_box">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <span>검색결과가 없습니다.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -206,6 +323,7 @@
   </div> 
 
 </div>
+
 
 </body>
 </html>
