@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-html, body{width: 100%; height: 100%; background: #f6f6f6}
+html, body{width: 100%; height: 100%; background: #f6f6f6; font-size: initial; letter-spacing: initial; overflow-y: auto;}
 
 
 /* input form */
@@ -31,6 +31,7 @@ button.ibt_cls .txt{display: none;}
 button.ibt_cls:hover{color: #3259c0;}
 
 a{color: #000; transition: 0.2s all;}
+a:link, a:visited{color: #000;}
 a:hover{color: #3259c0;}
 
 input[type='text']{-webkit-appearance: none; display: inline-block; width: 100%; border: 1px solid #cccccc; background-color: #fff; font-size: 14px; line-height: 20px; padding: 4px 8px; border-radius: 2px;}
@@ -50,6 +51,7 @@ select{display: inline-block; width: 100%; border: 1px solid #cccccc; background
 .ipt_chk > span::before{content: ''; display: block; position: absolute; width: 18px; height: 18px; left: 0; top:2px; border: 1px solid #ddd; border-radius: 4px; background-color: #fff;}
 .ipt_chk > input{position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;}{}
 .ipt_chk > i{position: absolute; left: 0px; top:0px; opacity: 0; transition: 0.2s all; font-size: 18px; z-index: 10; color: #3259c0; font-weight: bold;}
+.ipt_chk > input + i + span{font-size: 14px;}
 .ipt_chk > input:checked + i{display: block; left: 3px; top:4px; opacity: 1; font-size: 14px;}
 .ipt_chk > input:checked + i + span::before{border: 1px solid #3259c0;}
 
@@ -62,7 +64,10 @@ select{display: inline-block; width: 100%; border: 1px solid #cccccc; background
 .ipt_frm > ul > li > ul{display: flex; margin: 0 -2px; flex: 1; min-width: 240px;}
 .ipt_frm > ul > li > ul > li{margin: 0 2px; flex: 1; text-align: left;  display: flex; align-items: center;}
 .ipt_frm input[type='date']{height: 33px;}
-.ipt_frm select{height: 33px;}
+.ipt_frm select{height: 33px; -webkit-appearance: menulist; appearance: menulist;}
+
+.ipt_frm.cpn .btn_radio_sq{width: 100%;}
+.ipt_frm.cpn .btn_radio_sq input + span{width: 100%; text-align: center; font-size: 14px; padding:12px 8px;}
 
 /* layout */
 .wrap{position: relative; height: inherit; display: flex; flex-direction: column;}
@@ -111,7 +116,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .cont{flex:1; display: flex; flex-direction: column; overflow-x: auto;  overflow-y: auto;}
 
 /* login */
-.wrapper.login{width: 100%; height: 100%; display: flex; justify-content: center; background-color: #0c193a;}
+.wrapper.login{width: 100%; height: 100%; display: flex; justify-content: center; background-color: #0c193a; padding:0;}
 .login_wrap{width: 360px; background-color: #f6f6f6; padding:12px; display: flex; flex-direction: column; justify-content: center; z-index: 10;}
 .login_wrap .login_cont{flex:1; display: flex; flex-direction: column; justify-content: center; z-index: 11;}
 .login_wrap .login_cont h2{text-align: center; z-index: 10; }
@@ -187,6 +192,8 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 
 .filter_list{display: flex;}
 .filter_list > li{padding:0 8px; border-left: 1px solid #cbcbcb;}
+.filter_list > li.btn_area{border-left:0; padding-left: 0;}
+.filter_list > li.btn_area > button{height: 32px; margin-top: 22px; font-size: 14px;}
 .filter_list > li:first-child{border-left: 0; padding-left: 0px;}
 .filter_list > li > ul{display: flex;}
 .filter_list > li > ul > li{margin-left: 4px;}
@@ -196,6 +203,8 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .card_wrap{display: flex; flex-wrap: wrap;}
 .card_post{display: flex; flex-direction: column; position: relative; background-color: #fff; border: 1px solid #cbcbcb; box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 1px 1px rgba(0,0,0,.11); padding:8px; border-radius: 8px; margin: 4px; width: 218px;}
 .card_post .status{position: absolute; top:8px; right:8px; background-color: #fff; color:#000; border-radius: 8px; font-size: 12px; line-height: 16px; padding: 3px 4px; transition: 0.2s all; }
+.card_post .chk_area{position: absolute; top:8px; right:28px; transition: 0.2s all; }
+.card_post .chk_area > .ipt_chk{position: absolute;}
 .card_post > p{background-color: #3259c0; margin:-8px; padding: 8px; border-radius: 7px 7px 0 0;}
 .card_post .status.aft + p{background-color: #bbbbbb;}
 .card_post .status.aft + p + ul > li > span{color: #959595;}
@@ -218,6 +227,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .card_post > .aprv > .line_box > ul{display: flex;}
 .card_post > .aprv > .line_box > ul > li{flex: 1; border: 1px solid #ddd; border-radius: 4px; font-size: 12px; text-align: center; margin: 0 2px; padding: 2px; position: relative;}
 .card_post > .aprv > .line_box > ul > li.on{border: 1px solid #3259c0; color: #3259c0;}
+.card_post > .aprv > .line_box > ul > li.cpn{border: 1px solid #8c0017; color: #8c0017;}
 .card_post > .aprv > .line_box > ul > li::before{content: ''; display: block; position: absolute; width: 12px; height: 12px; left: -10px; top:5px; background-image: url('../../images/arrow_right.svg'); background-size: contain;}
 .card_post > .aprv > .line_box > ul > li:first-child::before{display: none;}
 .card_post .btn_box{margin-top:4px;}
@@ -238,6 +248,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .ctg_md .card_post > p{background-color: #bad772;}
 .ctg_ap .card_post > p{background-color: #ffbf00;}
 .ctg_sf .card_post > p{background-color: #ea9753;}
+.ctg_sf .card_post > .btn_box > button{font-size: 14px; padding:4px;}
 
 
 /* layer popup */
@@ -250,10 +261,14 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .laypop_box > .header > span{font-size: 16px;}
 .laypop_box > .header > .ibt_cls{position: absolute; right: 0; top: 0;}
 .laypop_box > .cont{padding: 8px;}
+.laypop_box > .cont > .sub_tit{font-size: 12px;}
 .laypop_box > .footer{padding: 8px;}
 .laypop_box .ipt_frm{padding: 4px;}
 
 .laypop .btn_box button{font-size: 14px; padding:8px;}
+
+.pop-loading::before{background-size: auto;}
+.pop-loading p{font-weight: normal; font-size: 14px;;}
 
 
 
