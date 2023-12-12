@@ -2,6 +2,10 @@
 
 html, body{width: 100%; height: 100%; background: #f6f6f6; font-size: initial; letter-spacing: initial; overflow-y: auto;}
 
+.cont_wrap.working_box{height: calc(100% - 50px); display: flex; justify-content: center; align-items: center;}
+.cont_wrap.working_box > div{}
+.cont_wrap.working_box > div > img{width: 400px;}
+
 
 /* input form */
 .btn_box.full > button{width: 100%;}
@@ -109,6 +113,7 @@ nav > ul > li > a.on + ul{display: block;}
 
 nav > ul > li > ul{display: none; border-top: 1px solid #f1f1f1;}
 nav > ul > li > ul > li > a{display: block; padding:4px 8px; text-align: center; text-align: left; padding-left: 30px; background-color: #fff;}
+nav > ul > li > ul > li > a.on{color: #3259c0;}
 nav > ul > li > ul > li:first-child > a{padding-top:8px;}
 nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 
@@ -343,6 +348,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
   .btn_flt_box > button > span{margin-top:2px;}
 
   .footer_wrap{height: 40px;}
+  .ft_img{margin: 0;}
 }
 
 
