@@ -219,6 +219,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .card_post .status.aft + p{background-color: #bbbbbb;}
 .card_post .status.aft + p + ul > li > span{color: #959595;}
 .card_post > p > .type{background-color: #fff; color:#000; border-radius: 8px; font-size: 12px; line-height: 16px; padding: 3px 4px; transition: 0.2s all; }
+.card_post > p > .type + span{margin-left: 4px; display: inline-block;}
 .card_post > p > .num{color: #fff;}
 .card_post > p > .date{color: #fff;}
 .card_post > ul{margin-top:12px; flex:1}
