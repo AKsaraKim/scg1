@@ -339,8 +339,12 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 
   .filter_list{flex-wrap: wrap;}
 
-  .filter_list > li{padding: 0; border-left: 0; width: calc(50% - 4px); margin: 2px; }
+  .filter_list > li{padding: 0; border-left: 0; width: calc(50% - 4px); margin: 4px 2px; }
   .filter_list > li > ul > li{margin-left:2px;}
+  .filter_list > li.sch_vlt{width: 100%;}
+  .filter_list > li.sch_date{width: auto;}
+  .filter_list > li.sch_date input[type="date"]{width: 120px;}
+  .filter_list > li.sch_date + .btn_area{width: auto;}
 
   .post_wrap > .header{padding: 12px;}
   .post_wrap > .header > .btn_flt_box{position: relative; padding: 0; margin:12px -2px 0 -2px; display: flex; }
