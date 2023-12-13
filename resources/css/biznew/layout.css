@@ -29,6 +29,16 @@ button.impt:hover{color:#fff; background-color: #bf9b30; border: 1px solid #bf9b
 button.agt{background-color: #c03249; color:#fff; border: 1px solid #c03249; border-radius: 8px; font-size: 12px; line-height: 18px; display: inline-block; padding: 4px 8px; transition: 0.2s all;}
 button.agt:hover{color:#fff; background-color: #8c0017; border: 1px solid #8c0017;}
 
+button.kakao{position: relative; background-color: #fee500; color:RGBA(0,0,0,0.85); border: 1px solid #fee500; border-radius: 8px; font-size: 14px; padding: 8px; line-height: 18px; display: inline-block; transition: 0.2s all;}
+button.kakao:hover{background-color: #fee500; color:RGBA(0,0,0,0.85); border: 1px solid #fee500; }
+button.kakao::before{content: ''; display: block; position: absolute; width: 20px; height: 20px; top:calc(50% - 10px); left: 8px; background-image: url(../../images/kakao_icon.png); background-size: cover;}
+button.kakao_out{font-size: 14px; padding: 8px;}
+
+button.naver{position: relative; background-color: #27d34b; color:#fff; border: 1px solid #27d34b; border-radius: 8px; font-size: 14px; padding: 8px; line-height: 18px; display: inline-block; transition: 0.2s all;}
+button.naver:hover{background-color: #27d34b; color:#fff; border: 1px solid #27d34b; }
+button.naver::before{content: ''; display: block; position: absolute; width: 17px; height: 16px; top:calc(50% - 8px); left: 8px; background-image: url(../../images/naver_login2x.png); background-size: cover;}
+button.naver_out{font-size: 14px; padding: 8px;}
+
 
 button.ibt_cls{background-color: transparent; border: none; border-radius: 0; font-size: 24px; width: 30px; height: 30px; padding: 0; line-height: 30px;}
 button.ibt_cls .txt{display: none;}
@@ -149,6 +159,8 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .login_box .btn_box.tws button.bsc_gld{font-size: 16px; line-height: 24px; padding: 8px 8px; background-color: #0031b4; color: #fff; border:1px solid #0031b4}
 .login_box .btn_box.tws button.bsc_gld:hover{font-size: 16px; line-height: 24px; padding: 8px 8px; background-color: #0046ff; color: #fff; border:1px solid #0046ff}
 
+
+
 .login_wrap .footer_wrap{margin:12px -12px -12px -12px;}
 .check_line{display: flex; justify-content: space-between;}
 
@@ -159,6 +171,13 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
+
+.lg_3rd_prt{border-radius: 8px; border:1px solid #cccccc; margin: 16px 0; padding: 12px; background-color: #fff;}
+.login_box .lg_3rd_prt .btn_box.full{margin-top:8px;}
+.lg_mem_info{border-bottom: 1px solid #eeeeee; padding-bottom: 8px;;}
+.lg_mem_info > img{width: 40px; height: 40px; border-radius: 15px;}
+.lg_mem_info > .name{margin-left: 4px;}
+.lg_mem_info > .num{font-size: 12px;}
 
 
 /* dashboard */
@@ -358,7 +377,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 
 
 /* appear animation */
-:is(.ani01, .ani02, .ani03, .ani04 ,.ani05){
+:is(.ani01, .ani02, .ani03, .ani04, .ani05, .ani06){
   animation: app_ani 0.4s ease-out;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -369,6 +388,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .ani03{animation-delay: 0.4s;}
 .ani04{animation-delay: 0.6s;}
 .ani05{animation-delay: 0.8s;}
+.ani06{animation-delay: 1.0s;}
 
 @keyframes app_ani {
   from {
