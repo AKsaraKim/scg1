@@ -6,6 +6,9 @@ html, body{width: 100%; height: 100%; background: #f6f6f6; font-size: initial; l
 .cont_wrap.working_box > div{}
 .cont_wrap.working_box > div > img{width: 400px;}
 
+.img_mo{display: none;}
+.img_pc{display: block;}
+
 
 /* input form */
 .btn_box.full > button{width: 100%;}
@@ -199,6 +202,13 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .noti_wrap .content > ul > li > a > .tit{flex:1}
 .noti_wrap .content > ul > li > a > .date{margin-left: 8px;}
 
+.bnr_line{padding:8px}
+.bnr_line > ul{display: flex;}
+.bnr_line > ul > li{margin-left: 16px; flex:1;}
+.bnr_line > ul > li:first-child{margin-left: 0px;}
+.bnr_line > ul > li img{width: 100%;}
+
+
 /* contents layout */
 .tit_line{margin: 8px;}
 .tit_line h3{font-size: 18px; margin: 0;}
@@ -301,12 +311,20 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .pop-loading p{font-weight: normal; font-size: 14px;;}
 
 
-.pop-modal2{min-width: auto; max-width: 100%; border-radius: 8px; padding:12px; box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22); }
+.pop-modal2{min-width: auto; max-width: 540px; border-radius: 8px; padding:12px; box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22); }
 
 
 /* mobile size */
+@media (max-width: 840px) and (min-width: 481px) {
+  .bnr_line > ul{display: flex; flex-direction: column;}
+  .bnr_line > ul > li{margin-left: 0px; margin-top:16px; flex: none;}
+  .bnr_line > ul > li:first-child{margin-top: 0px;}
+}
 
 @media (max-width: 480px) {
+  .img_pc{display: none;}
+  .img_mo{display: block;}
+
   .wrapper.login{background-color: #f6f6f6;}
 
   .login_wrap{width: 100%; background-color: transparent; z-index: 11;}
@@ -342,6 +360,10 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
   .mem_info.mb{display: block; position: absolute;width: 100%; text-align: center;  top:54px; z-index: 10;}
 
   .dh_wrap{padding:4px;}
+  .bnr_line{padding:4px}
+  .bnr_line > ul{display: flex; flex-direction: column;}
+  .bnr_line > ul > li{margin-left: 0px; margin-top:8px; flex: none;}
+  .bnr_line > ul > li:first-child{margin-top: 0px;}
 
   .sum_line > ul > li{padding:4px;}
   .sum_line > ul > li > a > .tit > .main{display: block;}
