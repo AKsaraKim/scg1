@@ -90,6 +90,11 @@ select{display: inline-block; width: 100%; border: 1px solid #cccccc; background
 .ipt_frm.cpn .btn_radio_sq{width: 100%;}
 .ipt_frm.cpn .btn_radio_sq input + span{width: 100%; text-align: center; font-size: 14px; padding:12px 8px;}
 
+/* icon */
+.img_icon.webex{display: inline-block; width: 34px; height: 24px; background-image: url('../../images/webex_icon.png'); background-size: cover; background-position: 0 -120px;}
+.img_icon.webex:hover{background-position: 0 -240px;}
+nav > ul > li > a.on .img_icon.webex{background-position: 0 -360px;}
+
 /* layout */
 .wrap{position: relative; height: inherit; display: flex; flex-direction: column;}
 
@@ -208,6 +213,11 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .bnr_line > ul > li:first-child{margin-left: 0px;}
 .bnr_line > ul > li img{width: 100%;}
 
+.room_line > ul{display: flex;}
+.room_line > ul > li{flex:1; padding:8px;}
+.room_line > ul > li > a{display: block; background-color: #fff; border: 1px solid #cbcbcb; box-shadow: 0 3px 6px rgba(0,0,0,.12), 0 2px 2px rgba(0,0,0,.11); padding:16px 24px; border-radius: 100px;}
+.room_line > ul > li > a > span{display: block; text-align: left; font-size: 16px;}
+
 
 /* contents layout */
 .tit_line{margin: 8px;}
@@ -325,6 +335,10 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
   .img_pc{display: none;}
   .img_mo{display: block;}
 
+  .img_icon.webex{width: 26px; height: 18px; background-position: 0 -19px;}  
+  .img_icon.webex:hover{background-position: 0 -37px;}
+  nav > ul > li > a.on .img_icon.webex{background-position: 0 -55px;}
+
   .wrapper.login{background-color: #f6f6f6;}
 
   .login_wrap{width: 100%; background-color: transparent; z-index: 11;}
@@ -367,6 +381,9 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 
   .sum_line > ul > li{padding:4px;}
   .sum_line > ul > li > a > .tit > .main{display: block;}
+
+  .room_line > ul{flex-direction: column;}
+  .room_line > ul > li{flex:1; padding:8px;}
   .noti_wrap{margin:8px 4px;}
   .cont_wrap{margin:0px; border-radius: 0; border: 0; box-shadow: none;}
   .cont_wrap.ebokji{margin:0px;}
