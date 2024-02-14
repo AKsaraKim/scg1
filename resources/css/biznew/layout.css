@@ -211,7 +211,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 .bnr_line > ul{display: flex;}
 .bnr_line > ul > li{margin-left: 16px; flex:1;}
 .bnr_line > ul > li:first-child{margin-left: 0px;}
-.bnr_line > ul > li img{width: 100%;}
+.bnr_line > ul > li img{width: 50%;}
 
 .room_line > ul{display: flex;}
 .room_line > ul > li{flex:1; padding:8px;}
