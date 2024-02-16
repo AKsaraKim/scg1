@@ -82,10 +82,19 @@ select{display: inline-block; width: 100%; border: 1px solid #cccccc; background
 .ipt_frm > ul > li > ul{display: flex; margin: 0 -2px; flex: 1; min-width: 240px;}
 .ipt_frm > ul > li > ul > li{margin: 0 2px; flex: 1; text-align: left;  display: flex; align-items: center;}
 .ipt_frm > ul > li > ul > li .time{display: block; font-size: 12px; padding:2px 10px; color: #ff0000;}
+.ipt_frm > ul > li > div{flex: 1;}
+.ipt_frm > ul > li > div > ul{display: flex; margin: 0 -2px; flex: 1; min-width: 240px; margin-top: 4px;}
+.ipt_frm > ul > li > div > ul:first-child{margin-top: 0;}
+.ipt_frm > ul > li > div > ul > li{margin: 0 2px; flex: 1; text-align: left;  display: flex; align-items: center;}
+.ipt_frm > ul > li > div > ul > li .time{display: block; font-size: 12px; padding:2px 10px; color: #ff0000;}
+.ipt_frm > ul > li > div > ul > li .sel_box{flex:1; margin-left: 4px;}
+.date_box{width: 100%;}
+.ipt_frm .sel_box{position: relative; width: 100%;}
+.ipt_frm .sel_box > i{position: absolute; top:calc(50% - 8px); right: 10px; width: 14px; height: 16px;}
 .ipt_frm .jst_box{flex:none; align-items:baseline}
 .ipt_frm .jst_box > button{margin-top:1px;}
 .ipt_frm input[type='date']{height: 33px;}
-.ipt_frm select{height: 33px; -webkit-appearance: menulist; appearance: menulist;}
+.ipt_frm select{height: 33px; -webkit-appearance: none; appearance: none;}
 
 .ipt_frm.cpn .btn_radio_sq{width: 100%;}
 .ipt_frm.cpn .btn_radio_sq input + span{width: 100%; text-align: center; font-size: 14px; padding:12px 8px;}
@@ -209,9 +218,9 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 
 .bnr_line{padding:8px}
 .bnr_line > ul{display: flex;}
-.bnr_line > ul > li{margin-left: 16px; flex:1;}
+.bnr_line > ul > li{margin-left: 16px; flex:1; max-width: 50%;}
 .bnr_line > ul > li:first-child{margin-left: 0px;}
-.bnr_line > ul > li img{width: 50%;}
+.bnr_line > ul > li img{width: 100%;}
 
 .room_line > ul{display: flex;}
 .room_line > ul > li{flex:1; padding:8px;}
@@ -328,7 +337,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
 /* mobile size */
 @media (max-width: 840px) and (min-width: 481px) {
   .bnr_line > ul{display: flex; flex-direction: column;}
-  .bnr_line > ul > li{margin-left: 0px; margin-top:16px; flex: none;}
+  .bnr_line > ul > li{margin-left: 0px; margin-top:16px; flex: none; max-width: 100%;}
   .bnr_line > ul > li:first-child{margin-top: 0px;}
 }
 
@@ -377,7 +386,7 @@ nav > ul > li > ul > li:last-child > a{padding-bottom:8px;}
   .dh_wrap{padding:4px;}
   .bnr_line{padding:4px}
   .bnr_line > ul{display: flex; flex-direction: column;}
-  .bnr_line > ul > li{margin-left: 0px; margin-top:8px; flex: none;}
+  .bnr_line > ul > li{margin-left: 0px; margin-top:8px; flex: none; max-width: 100%;}
   .bnr_line > ul > li:first-child{margin-top: 0px;}
 
   .sum_line > ul > li{padding:4px;}
